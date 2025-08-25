@@ -18,6 +18,14 @@
     =========================================== -->
   <link rel="stylesheet" href="breakpoint.css" />
   <title>My Portfolio</title>
+  <script src="https://cdn.emailjs.com/dist/email.min.js">
+
+
+    (function () {
+      emailjs.init("R2rHXWvq1i75bzzFs");
+    })();
+  </script>
+
 </head>
 
 <body>
@@ -53,7 +61,8 @@
         <!--<a href="https://x.com/Mugwe_IanDev?t=NAjG_n_szfGQRJNj-X1Z6A&s=09"><i class="bx bxl-twitter"></i></a>-->
       </div>
       <!-- add link for your CV into `href` -->
-      <a href="https://docs.google.com/document/d/1pZOwdQhzPx0bkZs9PUzQn6KShZQUcECJVLsKeiyRAxI/edit?usp=sharing" class="btn">Download CV</a>
+      <a href="https://docs.google.com/document/d/1pZOwdQhzPx0bkZs9PUzQn6KShZQUcECJVLsKeiyRAxI/edit?usp=sharing"
+        class="btn">Download CV</a>
     </div>
 
     <div class="home-img">
@@ -220,48 +229,53 @@
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me</span></h2>
 
-    <form action="#">
+    <form id="contactForm">
       <div class="input-box">
-        <input type="text" placeholder="Full Name" />
-        <input type="email" placeholder="Email Address" />
+        <input type="text" name="fullName" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
       </div>
 
       <!-- <div class="input-box"> -->
       <!-- <input type="number" placeholder="Mobile Number" /> -->
       <!-- <input type="text" placeholder="Email Subject" /> -->
       <!-- </div> -->
-      <textarea name="" id="" cols="30" rows="6" placeholder="Your Message"></textarea>
+      <textarea name="message" cols="30" rows="6" placeholder="Your Message" required></textarea>
       <input type="submit" value="Send Message" class="btn" />
     </form>
-  </section>
 
-  <!-- ==========================================
+    <!-- Toast -->
+    <div id="toast" class="toast">Sent successfully!</div>
+
+
+
+
+    <!-- ==========================================
                     Footer
     =========================================== -->
-  <footer class="footer">
-    <div class="footer-text">
-      <p>Copyright &copy; 2024 by IanDev | All Rights Reserved.</p>
-    </div>
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 by IanDev | All Rights Reserved.</p>
+      </div>
 
-    <div class="footer-iconTop">
-      <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-    </div>
-  </footer>
+      <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
 
-  <!-- ==========================================
+    <!-- ==========================================
                   Scroll Reveal
     =========================================== -->
-  <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 
-  <!-- ==========================================
+    <!-- ==========================================
                    Typed Js
     =========================================== -->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-  <!-- ==========================================
+    <!-- ==========================================
                   Custom Js
     =========================================== -->
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

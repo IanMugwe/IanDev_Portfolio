@@ -73,3 +73,30 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
+
+// Contact Form Email Logic
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const toast = document.getElementById("toast");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const SERVICE_ID = "service_xjrqksg";
+    const TEMPLATE_ID = "template_b2r4gxg";
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this).then(
+      function () {
+        toast.style.display = "block";
+        setTimeout(function () {
+          toast.style.display = "none";
+        }, 3000);
+      },
+      function (error) {
+        alert("Failed to send message. Please try again.");
+        console.log("FAILED...", error);
+      }
+    );
+  });
+
+});
